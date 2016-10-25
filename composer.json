@@ -2,10 +2,11 @@
     "name": "dedenmaulana/image-controller",
     "description": "Image controller for laravel",
     "license": "MIT",
+    "type": "library",
     "authors": [
         {
-            "name": "dedensaka",
-            "email": "deden@sakadigital.id"
+            "name": "denmasyarikin",
+            "email": "denmasyarikin@gmail.com"
         }
     ],
     "require": {
@@ -17,5 +18,5 @@
         "psr-4": {
             "Flipbox\\ImageController\\": "src/Flipbox/ImageController/"
         }
-    },
+    }
 }
