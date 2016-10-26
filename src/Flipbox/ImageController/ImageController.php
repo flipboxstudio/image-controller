@@ -6,7 +6,7 @@ use File;
 use Config;
 use Response;
 use Illuminate\Http\Request;
-use Intervention\Image\Image;
+use Intervention\Image\ImageCache;
 use Illuminate\Routing\Controller;
 use Intervention\Image\ImageManager;
 
@@ -57,8 +57,25 @@ class ImageController extends Controller
 	{
 		$manager = new ImageManager();
 
-		$image = $manager->make($source);
+		$img = $manager->cache(function($image) use ($request, $source) {
+			$image = $image->make($source);
 
+			return $this->manipulateImage($request, $image);
+
+		}, Config::get('image-controller.cache_lifetime', 15), true);
+
+		return $img;
+	}
+
+	/**
+	 * manipulate image base request
+	 *
+	 * @param Request $request
+	 * @param ImageCache $image
+	 * @return Image
+	 */
+	protected function manipulateImage(Request $request, ImageCache $image)
+	{
 		if ($request->has('size') AND 
 			array_key_exists($request->get('size'), Config::get('image-controller.sizes')))
 		{
@@ -84,8 +101,6 @@ class ImageController extends Controller
 				$constraint->aspectRatio();
 			});
 		}
-
-		return $image;
 	}
 
 	/**
