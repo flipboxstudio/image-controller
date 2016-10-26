@@ -18,7 +18,7 @@ return [
 	| example: http://example.com/imagas/filename.jpg <- you can override
 	*/
 	
-	'prefix' => 'img',
+	'prefix' => 'images',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -70,4 +70,13 @@ return [
 	*/
 
 	'extensions' => ['jpg','png','gif','tif','bmp'],
+
+	/*
+	|--------------------------------------------------------------------------
+	| cache
+	|--------------------------------------------------------------------------
+	| image cache lifetime
+	*/
+
+	'cache_lifetime' => 20, //under minutes
 ];
