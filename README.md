@@ -36,29 +36,24 @@ create folder `images` to your public folder (however you can change name of fol
 
 ### Request with size
 Now you can request image with specify size (`thumbnail`,`small`,`medium`,`large`)
-|Image Url
-|-
-|`http://localhost/images/photo.jpg?size=thumbanil` default width 100px
-|`http://localhost/images/photo.jpg?size=small` default width 240px
-|`http://localhost/images/photo.jpg?size=medium` default width 500px
-|`http://localhost/images/photo.jpg?size=large` default width 1024px
+
+`http://localhost/images/photo.jpg?size=thumbanil` default width 100px  
+`http://localhost/images/photo.jpg?size=small` default width 240px  
+`http://localhost/images/photo.jpg?size=medium` default width 500px  
+`http://localhost/images/photo.jpg?size=large` default width 1024px  
 
 ### Request with specify width or heigt
-Also you can request image with specify width or height or event both
-|Image Url
-|-
-|`http://localhost/images/photo.jpg?width=320` auto height
-|`http://localhost/images/photo.jpg?height=320` auto width
-|`http://localhost/images/photo.jpg?width=100&height=320` fixed width and height
+Also you can request image with specify width or height or event both  
+`http://localhost/images/photo.jpg?width=320` auto height  
+`http://localhost/images/photo.jpg?height=320` auto width  
+`http://localhost/images/photo.jpg?width=100&height=320` fixed width and height  
 
 ### Request with another extension
-Real file extension will be ignored, now you can access your images file with extensions that defined in config or even with no extension
-|Image Url
-|-
-|`http://localhost/images/photo`
-|`http://localhost/images/photo.jpg`
-|`http://localhost/images/photo.png`
-|`http://localhost/images/photo.jif`
+Real file extension will be ignored, now you can access your images file with extensions that defined in config or even with no extension  
+`http://localhost/images/photo` valid by default  
+`http://localhost/images/photo.jpg` valid by default  
+`http://localhost/images/photo.png` valid by default  
+`http://localhost/images/photo.jif` valid by default  
 
 ### ToDo
 * Cache
