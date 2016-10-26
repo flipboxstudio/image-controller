@@ -6,16 +6,18 @@ Controller your images for client request with size, quality, and extenstion wit
 * Controller image size
 * Controller image quality
 * Controller image extension
+* Cache image
 
 ## Required
-* php >= 5.6.0
-* https://github.com/intervention/image ^2.3
-* Laravel Framework 5.3.*
+* php >= 5.6.4
+* laravel/framework 5.3.*
+* intervention/image ^2.3
+* intervention/imagecache ^2.3
 
 ## Installation
 Require this package with composer:
 ```
-composer require flipboxstudio/image-controller
+composer require flipbox/image-controller
 ```
 Add the ServiceProvider to the providers array in config/app.php
 ```
@@ -56,7 +58,6 @@ Real file extension will be ignored, now you can access your images file with ex
 `http://localhost/images/photo.jif` valid by default  
 
 ### ToDo
-* Cache
 * Add Watermark
 * Images Api Uploader
 * Test 
