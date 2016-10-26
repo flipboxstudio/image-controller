@@ -6,6 +6,7 @@ Controller your images for client request with size, quality, and extenstion wit
 * Controller image size
 * Controller image quality
 * Controller image extension
+
 ## Required
 * php >= 5.6.0
 * https://github.com/intervention/image ^2.3
@@ -35,26 +36,32 @@ create folder `images` to your public folder (however you can change name of fol
 
 ### Request with size
 Now you can request image with specify size (`thumbnail`,`small`,`medium`,`large`)
-`http://localhost/images/photo.jpg?size=thumbanil` default width 100px
-`http://localhost/images/photo.jpg?size=small` default width 240px
-`http://localhost/images/photo.jpg?size=medium` default width 500px
-`http://localhost/images/photo.jpg?size=large` default width 1024px
+|Image Url
+|-
+|`http://localhost/images/photo.jpg?size=thumbanil` default width 100px
+|`http://localhost/images/photo.jpg?size=small` default width 240px
+|`http://localhost/images/photo.jpg?size=medium` default width 500px
+|`http://localhost/images/photo.jpg?size=large` default width 1024px
 
 ### Request with specify width or heigt
 Also you can request image with specify width or height or event both
-`http://localhost/images/photo.jpg?width=320` auto height
-`http://localhost/images/photo.jpg?height=320` auto width
-`http://localhost/images/photo.jpg?width=100&height=320` fixed width and height
+|Image Url
+|-
+|`http://localhost/images/photo.jpg?width=320` auto height
+|`http://localhost/images/photo.jpg?height=320` auto width
+|`http://localhost/images/photo.jpg?width=100&height=320` fixed width and height
 
 ### Request with another extension
 Real file extension will be ignored, now you can access your images file with extensions that defined in config or even with no extension
-
-`http://localhost/images/photo?width=100&height=320` this is valid by default
-`http://localhost/images/photo.jpg?width=100&height=320` this is valid by default
-`http://localhost/images/photo.png?width=100&height=320` this is valid by default
-`http://localhost/images/photo.jig?width=100&height=320` this is valid by default
+|Image Url
+|-
+|`http://localhost/images/photo`
+|`http://localhost/images/photo.jpg`
+|`http://localhost/images/photo.png`
+|`http://localhost/images/photo.jif`
 
 ### ToDo
-* Add watermark
+* Cache
+* Add Watermark
 * Images Api Uploader
 * Test 
