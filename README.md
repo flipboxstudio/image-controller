@@ -44,7 +44,7 @@ Now you can request image with specify size (`thumbnail`,`small`,`medium`,`large
 `http://localhost/images/photo.jpg?size=medium` default width 500px  
 `http://localhost/images/photo.jpg?size=large` default width 1024px  
 
-### Request with specify width or heigt
+### Request with specify width or height
 Also you can request image with specify width or height or event both  
 `http://localhost/images/photo.jpg?width=320` auto height  
 `http://localhost/images/photo.jpg?height=320` auto width  
@@ -55,7 +55,7 @@ Real file extension will be ignored, now you can access your images file with ex
 `http://localhost/images/photo` valid by default  
 `http://localhost/images/photo.jpg` valid by default  
 `http://localhost/images/photo.png` valid by default  
-`http://localhost/images/photo.jif` valid by default  
+`http://localhost/images/photo.gif` valid by default  
 
 ### ToDo
 * Add Watermark
