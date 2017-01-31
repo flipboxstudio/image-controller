@@ -30,6 +30,8 @@ class ImageControllerServiceProvider extends ServiceProvider
         $config = $this->app->config['image-controller'];
 
         $this->appendRoute($config);
+
+        $this->app->bind('image-controller', 'Flipbox\ImageController\ImageUploader');
     }
 
     /**
@@ -46,8 +48,8 @@ class ImageControllerServiceProvider extends ServiceProvider
     	];
 
     	Route::group($options, function(){
-    		Route::get('/{file}.{ext?}', 'ImageController@image');
-    		Route::get('/{file}', 'ImageController@image');
+    		Route::get('/{file}.{ext?}', 'ImageController@image')->where('file', '[A-Za-z0-9\/]+');
+    		Route::get('/{file}', 'ImageController@image')->where('file', '[A-Za-z0-9\/]+');
     	});
     }
 }

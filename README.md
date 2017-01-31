@@ -23,6 +23,10 @@ Add the ServiceProvider to the providers array in config/app.php
 ```
 Flipbox\ImageController\ImageControllerServiceProvider::class,
 ```
+Add the facade of this package to the $aliases array config/app.php
+```
+'ImageController' => Flipbox\ImageController\Facade::class
+```
 Copy the package resource to your application with the publish command:
 ```
 php artisan vendor:publish
@@ -55,9 +59,31 @@ Real file extension will be ignored, now you can access your images file with ex
 `http://localhost/images/photo` valid by default  
 `http://localhost/images/photo.jpg` valid by default  
 `http://localhost/images/photo.png` valid by default  
-`http://localhost/images/photo.gif` valid by default  
+`http://localhost/images/photo.gif` valid by default
+
+### Uploaded file
+We provide uploader file that make upload file very easy. First parameter is [UploadedFile](https://laravel.com/api/5.2/Illuminate/Http/UploadedFile.html) or [Base64 Encoding](https://en.wikipedia.org/wiki/Base64), and second parameter is `directory/prefix.`
+```
+ImageController::upload($request->file, 'profile');
+```
+this method will be return string of generated filename `str_random(34)`
+
+### Model Assesor
+Add [model accesor](https://laravel.com/docs/5.2/eloquent-mutators#accessors-and-mutators) to generate image link.
+```
+	/**
+	 * Get ProfilePicture.
+	 *
+	 * @param  string  $value
+	 * @return string
+	 */
+	public function getProfilePictureAttribute($value)
+	{
+		return ImageController::generateImageUrl($value, 'small');
+	}
+
+```
 
 ### ToDo
 * Add Watermark
-* Images Api Uploader
 * Test 
