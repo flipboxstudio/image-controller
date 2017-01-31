@@ -48,6 +48,7 @@ return [
 		'small' => 240,
 		'medium' => 500,
 		'large' => 1024,
+		'default' => 'thumbnail' // original, thumbnail, small, medium or large
 	],
 
 	/*
