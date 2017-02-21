@@ -43,7 +43,7 @@ create folder `images` to your public folder (however you can change name of fol
 ### Request with size
 Now you can request image with specify size (`thumbnail`,`small`,`medium`,`large`)
 
-`http://localhost/images/photo.jpg?size=thumbanil` default width 100px  
+`http://localhost/images/photo.jpg?size=thumbnail` default width 100px  
 `http://localhost/images/photo.jpg?size=small` default width 240px  
 `http://localhost/images/photo.jpg?size=medium` default width 500px  
 `http://localhost/images/photo.jpg?size=large` default width 1024px  
