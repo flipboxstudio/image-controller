@@ -193,4 +193,22 @@ class ImageUploader
 
 		return URL::to($url);
 	}
+
+	/**
+	 * delete image
+	 *
+	 * @param mixed $path
+	 * @return string
+	 */
+	public function delete($path=null)
+	{
+		if (is_null($path)) return;
+
+		$basePath = $this->getImageBasePath();
+		$imagePath = $basePath.'/'.$path;
+
+		if (File::exists($imagePath)) {
+			File::delete($imagePath);
+		}
+	}
 }
