@@ -18,7 +18,7 @@
     "require": {
         "php": ">=5.6.4",
         "laravel/framework": "^5.2",
-        "intervention/image": "dev-my-bugfix",
+        "intervention/image": "dev-master",
         "intervention/imagecache": "^2.3"
     },
     "autoload": {
