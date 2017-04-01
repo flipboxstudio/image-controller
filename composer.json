@@ -9,10 +9,16 @@
             "email": "denmasyarikin@gmail.com"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/flipboxstudio/image"
+        }
+    ],
     "require": {
         "php": ">=5.6.4",
         "laravel/framework": "^5.2",
-        "intervention/image": "^2.3",
+        "intervention/image": "dev-my-bugfix",
         "intervention/imagecache": "^2.3"
     },
     "autoload": {
